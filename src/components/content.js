@@ -40,7 +40,7 @@ showButton = () => {
 render() {
   return (
     <Fragment>
-      <Navbar coins={this.state.coins} ></Navbar>
+      <Navbar coins={sessionStorage.getItem('coins')} ></Navbar>
       <div className="ui centered align grid" id="align">
         {/* <h2>Generated Contents and Questions </h2> */}
       </div>

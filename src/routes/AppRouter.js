@@ -9,9 +9,9 @@ class AppRouter extends React.Component {
       <Fragment>
         <BrowserRouter>
           <Switch>
-            <Route path="/" component={Login} exact={true} />
+            {/* <Route path="/" component={Login} exact={true} /> */}
             <Route path="/contentPage" component={Content} exact={true}/>
-            <Route path="/contentList" component={ContentsPage} exact={true}/>
+            <Route path="/" component={ContentsPage} exact={true}/>
           </Switch>
         </BrowserRouter>
       </Fragment>

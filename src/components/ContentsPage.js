@@ -16,21 +16,21 @@ export default class Content extends Component {
 
 		console.log("the value of coin in session Storage",sessionStorage.getItem("coins"))
 
-		if(sessionStorage.getItem("coins")==null)
-		if(this.props.location.state.coinsGiven===undefined){
+		// if(sessionStorage.getItem("coins")==null)
+		// if(this.props.location.state.coinsGiven===undefined){
 
-			console.log("inside if")
+		// 	console.log("inside if")
 			sessionStorage.setItem("coins",0)
-		}
-		else{
+		// }
+		// else{
 
-			if(!Number(sessionStorage.getItem("coins")>=Number(this.props.location.state.coinsGiven))){
+		// 	if(!Number(sessionStorage.getItem("coins")>=Number(this.props.location.state.coinsGiven))){
 
-				sessionStorage.setItem("coins",this.props.location.state.coinsGiven)
+		// 		sessionStorage.setItem("coins",this.props.location.state.coinsGiven)
 
-			}
+		// 	}
 			
-		}
+		// }
 		this.randomList = Array();
 		while(this.randomList.length <5) {
 			var num = Math.floor(Math.random()*5)
@@ -89,7 +89,7 @@ export default class Content extends Component {
 		// this.generateInteractTelemetry(this.props.location.state)
         this.props.history.push({
             pathname:'/contentPage',
-			state:{description:index, coins:sessionStorage.getItem('coins'), userId:this.props.location.state.code}
+			state:{description:index, coins:sessionStorage.getItem('coins')}
 			
         });
       }
